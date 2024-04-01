@@ -6,15 +6,16 @@ export default function Accordian() {
     return <div className="Wrapper">
         <div className="accordian">
             {
-                data && data.length > 0 ?
-                    (data.map((dataItem) => (<div className="item">
-                        <div className="title">
-                            <h3>{dataItem.question}</h3>
-                            <span>+</span>
-                        </div>
-                    </div>))
-                    ) : (<div>No data found</div>)
+                data && data.length > 0 ? (data.map((dataItem) => (<div className="item">
+                    <div className="title">
+                        <h3>{dataItem.question}</h3>
+                        <span>+</span>
+                    </div>
+                </div>))
+                ) : (<div>No data found</div>)
             }
         </div>
     </div>
 }
+
+// https://www.youtube.com/watch?v=5ZdHfJVAY-s&ab_channel=freeCodeCamp.org   15 23 te kaldim
