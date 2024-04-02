@@ -1,5 +1,6 @@
 import { useState } from "react";
 import data from "./data";
+import "./styles.css";
 
 export default function Accordian() {
   const [selected, setSelected] = useState(null);
@@ -7,7 +8,7 @@ export default function Accordian() {
     setSelected(getCurrentId === selected ? null : getCurrentId);
   }
   return (
-    <div className="Wrapper">
+    <div className="wrapper">
       <div className="accordian">
         {data && data.length > 0 ? (
           data.map((dataItem) => (
