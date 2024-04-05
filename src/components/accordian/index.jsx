@@ -3,33 +3,45 @@ import data from "./data";
 import "./styles.css";
 
 export default function Accordian() {
-  const [selected, setSelected] = useState(null);
-  function handleSingleSelection(getCurrentId) {
-    setSelected(getCurrentId === selected ? null : getCurrentId);
-  }
-  return (
-    <div className="wrapper">
-      <div className="accordian">
-        {data && data.length > 0 ? (
-          data.map((dataItem) => (
-            <div className="item">
-              <div
-                onClick={() => handleSingleSelection(dataItem.id)}
-                className="title">
-                <h4>{dataItem.question}</h4>
-                <span>+</span>
-              </div>
-              {selected === dataItem.id ? (
-                <div className="content">{dataItem.answer}</div>
-              ) : null}
+    const [selected, setSelected] = useState(null);
+    const [enableMultiSelection, setEnableMultiSelection] = useState(false);
+    const [multiple, setMultiple] = useState([]);
+
+    function handleSingleSelection(getCurrentId) {
+        setSelected(getCurrentId === selected ? null : getCurrentId);
+
+    function handleMultiSelection(getCurrentId)
+
+    }
+    return (
+        <div className="wrapper">
+            <button onClick={() => setEnableMultiSelection(!enableMultiSelection)}>
+                Enable Multi Selection
+            </button>
+            <div className="accordian">
+                {data && data.length > 0 ? (
+                    data.map((dataItem) => (
+                        <div className="item">
+                            <div
+                                onClick={
+                                    enableMultiSelection
+                                    ? () => handleMultiSelection(dataItem.id) 
+                                    : () => handleSingleSelection(dataItem.id)}
+                                className="title">
+                                <h4>{dataItem.question}</h4>
+                                <span>+</span>
+                            </div>
+                            {selected === dataItem.id ? (
+                                <div className="content">{dataItem.answer}</div>
+                            ) : null}
+                        </div>
+                    ))
+                ) : (
+                    <div>No data found</div>
+                )}
             </div>
-          ))
-        ) : (
-          <div>No data found</div>
-        )}
-      </div>
-    </div>
-  );
+        </div>
+    );
 }
 
 // https://www.youtube.com/watch?v=5ZdHfJVAY-s&ab_channel=freeCodeCamp.org   15 23 te kaldim
