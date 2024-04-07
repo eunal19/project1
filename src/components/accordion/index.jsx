@@ -41,10 +41,17 @@ export default function Accordion() {
                   <h4>{dataItem.question}</h4>
                   <span>+</span>
                 </div>
-                {selected === dataItem.id ||
+                {enableMultiSelection
+                  ? multiple.indexOf(dataItem.id) !== -1 && (
+                      <div className="content">{dataItem.answer}</div>
+                    )
+                  : selected === dataItem.id && (
+                      <div className="content">{dataItem.answer}</div>
+                    )}
+                {/* {selected === dataItem.id ||
                 multiple.indexOf(dataItem.id) !== -1 ? (
                   <div className="content">{dataItem.answer}</div>
-                ) : null}
+                ) : null} */}
               </div>
             ))
           ) : (
