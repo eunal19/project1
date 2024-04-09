@@ -73,7 +73,9 @@ export default function Accordion() {
             </div>
           ))
         ) : (
-          <div>No data found</div>
+          <div>
+            No data found. Please try again or put some data in the data file
+          </div>
         )}
       </div>
     </div>
