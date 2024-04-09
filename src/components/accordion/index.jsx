@@ -43,19 +43,19 @@ export default function Accordion() {
       </button>
       {/* Container for the accordion items */}
       <div className="accordion">
-        {/* Mapping over the 'data' array to render each item */}
+        {/* Mapping over the 'data' array to render each item. **This is a test mode for commit you can delete this section later on */}
         {data && data.length > 0 ? (
           data.map((dataItem) => (
             <div className="item" key={dataItem.id}>
               {/* Clickable title for each item */}
               <div
-                // Event handler for title click, based on selection mode
+                // Event handler for title click, based on selection mode. **This is a test mode for commit you can delete this section later on
                 onClick={
                   enableMultiSelection
                     ? () => handleMultiSelection(dataItem.id) // Multi-selection mode
                     : () => handleSingleSelection(dataItem.id) // Single-selection mode
                 }
-                className="title" // CSS class for styling
+                className="title" // CSS class for styling. **This is a test mode for commit you can delete this section later on
               >
                 {/* Question text */}
                 <h4>{dataItem.question}</h4>
