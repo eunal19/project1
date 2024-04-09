@@ -62,7 +62,7 @@ export default function Accordion() {
                 {/* Plus sign icon */}
                 <span>+</span>
               </div>
-              {/* Render the answer content based on selection mode */}
+              {/* Render the answer content based on selection mode. **This is a test mode for commit you can delete this section later on */}
               {enableMultiSelection
                 ? multiple.indexOf(dataItem.id) !== -1 && (
                     <div className="content">{dataItem.answer}</div>
