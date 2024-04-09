@@ -43,26 +43,26 @@ export default function Accordion() {
       </button>
       {/* Container for the accordion items */}
       <div className="accordion">
-        {/* Mapping over the 'data' array to render each item. **This is a test mode for commit you can delete this section later on */}
+        {/* Mapping over the 'data' array to render each item. */}
         {data && data.length > 0 ? (
           data.map((dataItem) => (
             <div className="item" key={dataItem.id}>
               {/* Clickable title for each item */}
               <div
-                // Event handler for title click, based on selection mode. **This is a test mode for commit you can delete this section later on
+                // Event handler for title click, based on selection mode.
                 onClick={
                   enableMultiSelection
                     ? () => handleMultiSelection(dataItem.id) // Multi-selection mode
                     : () => handleSingleSelection(dataItem.id) // Single-selection mode
                 }
-                className="title" // CSS class for styling. **This is a test mode for commit you can delete this section later on
+                className="title" // CSS class for styling.
               >
                 {/* Question text */}
                 <h4>{dataItem.question}</h4>
                 {/* Plus sign icon */}
                 <span>+</span>
               </div>
-              {/* Render the answer content based on selection mode. **This is a test mode for commit you can delete this section later on */}
+              {/* Render the answer content based on selection mode. */}
               {enableMultiSelection
                 ? multiple.indexOf(dataItem.id) !== -1 && (
                     <div className="content">{dataItem.answer}</div>
@@ -73,9 +73,7 @@ export default function Accordion() {
             </div>
           ))
         ) : (
-          <div>
-            No data found. Please try again or put some data in the data file
-          </div>
+          <div>No data found.</div>
         )}
       </div>
     </div>
