@@ -2,6 +2,8 @@ import './App.css';
 import Accordion from './components/accordion';
 import RandomColor from './components/random-color';
 import Test1 from './components/test1/test1';
+import Test2 from './components/test2/test2';
+
 
 function App() {
   return (
@@ -9,7 +11,7 @@ function App() {
       <Accordion />
       <RandomColor />
       <Test1 />
-
+      <Test2 />
     </div>
   );
 }
