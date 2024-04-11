@@ -6,7 +6,7 @@ export default function RandomColor(params) {
 
   function changeColor(params) {}
   return (
-    <div className="container">
+    <div>
       <button onClick={() => changeColor()}>Create HEX Color</button>
       <button>Generate RGB Color</button>
       <button>Generate Random Color</button>
