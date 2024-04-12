@@ -12,6 +12,7 @@ function App() {
       <RandomColor />
       <Test1 />
       <Test2 />
+      <Test3 />
     </div>
   );
 }
