@@ -3,7 +3,7 @@ import Accordion from './components/accordion';
 import RandomColor from './components/random-color';
 import Test1 from './components/test1/test1';
 import Test2 from './components/test2/test2';
-
+import Test3 from './components/test3/test3';
 
 function App() {
   return (
