@@ -25,7 +25,7 @@ export default function StarRating({ noOfStars = 5 }) {
       {[...Array(noOfStars)].map((_, index) => {
         index += 1
         return <FaStar key={index} />;
-        onclick = {()=>handleClick(index)};
+        onlick = {()=>handleClick(index)};
         onmouseenter = {()=>handleMouseEnter(index)};
         onmouseleave = {()=>handleMouseLeave(index)};
         size =  {40}
