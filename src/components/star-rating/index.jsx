@@ -27,7 +27,7 @@ export default function StarRating({ noOfStars = 5 }) {
             onClick={() => handleClick(index)}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
-            size={40}
+            size={60}
           />
         );
       })}
